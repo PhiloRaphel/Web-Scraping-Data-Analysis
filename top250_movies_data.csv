@@ -1,0 +1,251 @@
+Movie Title,Date of Release,Movie Rank,Movie Rating
+The Shawshank Redemption,1994,1,9.3
+The Godfather,1972,2,9.2
+The Dark Knight,2008,3,9.0
+The Godfather: Part II,1974,4,9.0
+12 Angry Men,1957,5,9.0
+Schindler's List,1993,6,9.0
+The Lord of the Rings: The Return of the King,2003,7,9.0
+Pulp Fiction,1994,8,8.9
+The Lord of the Rings: The Fellowship of the Ring,2001,9,8.8
+"Il buono, il brutto, il cattivo",1966,10,8.8
+Forrest Gump,1994,11,8.8
+Fight Club,1999,12,8.8
+The Lord of the Rings: The Two Towers,2002,13,8.8
+Inception,2010,14,8.8
+The Empire Strikes Back,1980,15,8.7
+The Matrix,1999,16,8.7
+Goodfellas,1990,17,8.7
+One Flew Over the Cuckoo's Nest,1975,18,8.7
+Spider-Man: Across the Spider-Verse,2023,19,8.7
+Se7en,1995,20,8.6
+It's a Wonderful Life,1946,21,8.6
+Shichinin no samurai,1954,22,8.6
+The Silence of the Lambs,1991,23,8.6
+Interstellar,2014,24,8.7
+Saving Private Ryan,1998,25,8.6
+Cidade de Deus,2002,26,8.6
+La Vita è bella,1997,27,8.6
+The Green Mile,1999,28,8.6
+Star Wars,1977,29,8.6
+Terminator 2: Judgment Day,1991,30,8.6
+Back to the Future,1985,31,8.5
+Sen to Chihiro no kamikakushi,2001,32,8.6
+The Pianist,2002,33,8.5
+Psycho,1960,34,8.5
+Gisaengchung,2019,35,8.5
+Gladiator,2000,36,8.5
+The Lion King,1994,37,8.5
+Léon,1994,38,8.5
+American History X,1998,39,8.5
+The Departed,2006,40,8.5
+Whiplash,2014,41,8.5
+The Prestige,2006,42,8.5
+Oppenheimer,2023,43,8.6
+The Usual Suspects,1995,44,8.5
+Hotaru no haka,1988,45,8.5
+Seppuku,1962,46,8.6
+Casablanca,1942,47,8.5
+Intouchables,2011,48,8.5
+Modern Times,1936,49,8.5
+Nuovo Cinema Paradiso,1988,50,8.5
+C'era una volta il West,1968,51,8.5
+Rear Window,1954,52,8.5
+Alien,1979,53,8.5
+City Lights,1931,54,8.5
+Apocalypse Now,1979,55,8.4
+Memento,2000,56,8.4
+Django Unchained,2012,57,8.5
+Raiders of the Lost Ark,1981,58,8.4
+WALL·E,2008,59,8.4
+Das Leben der Anderen,2006,60,8.4
+Sunset Blvd.,1950,61,8.4
+Paths of Glory,1957,62,8.4
+Avengers: Infinity War,2018,63,8.4
+The Shining,1980,64,8.4
+The Great Dictator,1940,65,8.4
+Witness for the Prosecution,1957,66,8.4
+Spider-Man: Into the Spider-Verse,2018,67,8.4
+Aliens,1986,68,8.4
+The Dark Knight Rises,2012,69,8.4
+Inglourious Basterds,2009,70,8.3
+American Beauty,1999,71,8.3
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,1964,72,8.4
+Oldeuboi,2003,73,8.4
+Coco,2017,74,8.4
+Amadeus,1984,75,8.4
+Toy Story,1995,76,8.3
+Das Boot,1981,77,8.4
+Braveheart,1995,78,8.3
+Avengers: Endgame,2019,79,8.4
+Joker,2019,80,8.4
+Mononoke-hime,1997,81,8.3
+Good Will Hunting,1997,82,8.3
+Once Upon a Time in America,1984,83,8.3
+Kimi no na wa.,2016,84,8.4
+3 Idiots,2009,85,8.4
+Tengoku to jigoku,1963,86,8.4
+Singin' in the Rain,1952,87,8.3
+Requiem for a Dream,2000,88,8.3
+Capharnaüm,2018,89,8.4
+Toy Story 3,2010,90,8.3
+Idi i smotri,1985,91,8.4
+Star Wars: Episode VI - Return of the Jedi,1983,92,8.3
+Eternal Sunshine of the Spotless Mind,2004,93,8.3
+2001: A Space Odyssey,1968,94,8.3
+Jagten,2012,95,8.3
+Reservoir Dogs,1992,96,8.3
+Ikiru,1952,97,8.3
+Lawrence of Arabia,1962,98,8.3
+Citizen Kane,1941,99,8.3
+M,1931,100,8.3
+The Apartment,1960,101,8.3
+North by Northwest,1959,102,8.3
+Vertigo,1958,103,8.3
+Double Indemnity,1944,104,8.3
+Le Fabuleux destin d'Amélie Poulain,2001,105,8.3
+Scarface,1983,106,8.3
+Full Metal Jacket,1987,107,8.3
+A Clockwork Orange,1971,108,8.3
+Incendies,2010,109,8.3
+Heat,1995,110,8.3
+Hamilton,2020,111,8.3
+Up,2009,112,8.3
+To Kill a Mockingbird,1962,113,8.3
+The Sting,1973,114,8.3
+Jodaeiye Nader az Simin,2011,115,8.3
+Indiana Jones and the Last Crusade,1989,116,8.2
+Metropolis,1927,117,8.3
+Die Hard,1988,118,8.2
+L.A. Confidential,1997,119,8.2
+Ladri di biciclette,1948,120,8.3
+Taare Zameen Par,2007,121,8.3
+Snatch.,2000,122,8.2
+Taxi Driver,1976,123,8.2
+1917,2019,124,8.2
+Der Untergang,2004,125,8.2
+Dangal,2016,126,8.3
+Per qualche dollaro in più,1965,127,8.2
+Top Gun: Maverick,2022,128,8.3
+Batman Begins,2005,129,8.2
+Some Like It Hot,1959,130,8.2
+The Kid,1921,131,8.2
+The Wolf of Wall Street,2013,132,8.2
+The Father,2020,133,8.2
+Green Book,2018,134,8.2
+All About Eve,1950,135,8.2
+Judgment at Nuremberg,1961,136,8.3
+The Truman Show,1998,137,8.2
+There Will Be Blood,2007,138,8.2
+Ran,1985,139,8.2
+Casino,1995,140,8.2
+Shutter Island,2010,141,8.2
+El Laberinto del fauno,2006,142,8.2
+The Sixth Sense,1999,143,8.2
+Unforgiven,1992,144,8.2
+Jurassic Park,1993,145,8.2
+A Beautiful Mind,2001,146,8.2
+The Treasure of the Sierra Madre,1948,147,8.2
+Yôjinbô,1961,148,8.2
+No Country for Old Men,2007,149,8.2
+Kill Bill: Vol. 1,2003,150,8.2
+Monty Python and the Holy Grail,1975,151,8.2
+The Great Escape,1963,152,8.2
+The Thing,1982,153,8.2
+Rashômon,1950,154,8.2
+Finding Nemo,2003,155,8.2
+The Elephant Man,1980,156,8.2
+Chinatown,1974,157,8.2
+Hauru no ugoku shiro,2004,158,8.2
+Dial M for Murder,1954,159,8.2
+Gone with the Wind,1939,160,8.2
+V for Vendetta,2005,161,8.2
+Raging Bull,1980,162,8.1
+Spider-Man: No Way Home,2021,163,8.2
+"Lock, Stock and Two Smoking Barrels",1998,164,8.1
+El Secreto de sus ojos,2009,165,8.2
+Prisoners,2013,166,8.1
+Inside Out,2015,167,8.1
+"Three Billboards Outside Ebbing, Missouri",2017,168,8.1
+The Bridge on the River Kwai,1957,169,8.1
+Trainspotting,1996,170,8.1
+Fargo,1996,171,8.1
+Warrior,2011,172,8.1
+Gran Torino,2008,173,8.1
+Catch Me If You Can,2002,174,8.1
+Tonari no Totoro,1988,175,8.1
+Million Dollar Baby,2004,176,8.1
+Klaus,2019,177,8.2
+Harry Potter and the Deathly Hallows: Part 2,2011,178,8.1
+Bacheha-Ye aseman,1997,179,8.2
+Blade Runner,1982,180,8.1
+12 Years a Slave,2013,181,8.1
+Before Sunrise,1995,182,8.1
+The Gold Rush,1925,183,8.1
+The Grand Budapest Hotel,2014,184,8.1
+Ben-Hur,1959,185,8.1
+Gone Girl,2014,186,8.1
+Barry Lyndon,1975,187,8.1
+On the Waterfront,1954,188,8.1
+Hacksaw Ridge,2016,189,8.1
+In the Name of the Father,1993,190,8.1
+The General,1926,191,8.1
+Salinui chueok,2003,192,8.1
+The Deer Hunter,1978,193,8.1
+Smultronstället,1957,194,8.1
+Le Salaire de la peur,1953,195,8.2
+The Third Man,1949,196,8.1
+Relatos salvajes,2014,197,8.1
+Sherlock Jr.,1924,198,8.2
+Mad Max: Fury Road,2015,199,8.1
+Dead Poets Society,1989,200,8.1
+Mr. Smith Goes to Washington,1939,201,8.1
+"Monsters, Inc.",2001,202,8.1
+How to Train Your Dragon,2010,203,8.1
+Jaws,1975,204,8.1
+Mary and Max,2009,205,8.1
+"Sjunde inseglet, Det",1957,206,8.1
+Room,2015,207,8.1
+Ford v Ferrari,2019,208,8.1
+The Big Lebowski,1998,209,8.1
+Tôkyô monogatari,1953,210,8.1
+Ratatouille,2007,211,8.1
+Rocky,1976,212,8.1
+Hotel Rwanda,2004,213,8.1
+La Passion de Jeanne d'Arc,1928,214,8.1
+Logan,2017,215,8.1
+Spotlight,2015,216,8.1
+Platoon,1986,217,8.1
+The Terminator,1984,218,8.1
+Jai Bhim,2021,219,8.8
+Before Sunset,2004,220,8.1
+Rush,2013,221,8.1
+Network,1976,222,8.1
+Stand by Me,1986,223,8.1
+The Best Years of Our Lives,1946,224,8.1
+La Haine,1995,225,8.1
+The Wizard of Oz,1939,226,8.1
+The Exorcist,1973,227,8.1
+Into the Wild,2007,228,8.1
+Pirates of the Caribbean: The Curse of the Black Pearl,2003,229,8.1
+The Incredibles,2004,230,8.0
+To Be or Not to Be,1942,231,8.2
+Hachi: A Dog's Tale,2009,232,8.1
+Ah-ga-ssi,2016,233,8.1
+Groundhog Day,1993,234,8.0
+Babam Ve Oglum,2005,235,8.2
+The Grapes of Wrath,1940,236,8.1
+La Battaglia di Algeri,1966,237,8.1
+Amores perros,2000,238,8.1
+Rebecca,1940,239,8.1
+Cool Hand Luke,1967,240,8.1
+The Sound of Music,1965,241,8.1
+Pather Panchali,1955,242,8.2
+It Happened One Night,1934,243,8.1
+The Iron Giant,1999,244,8.1
+The Help,2011,245,8.1
+Les Quatre cents coups,1959,246,8.1
+Persona,1966,247,8.1
+Life of Brian,1979,248,8.0
+Aladdin,1992,249,8.0
+Gangs of Wasseypur,2012,250,8.2
