@@ -4,6 +4,8 @@ import pandas as pd
 import scrapy
 import csv
 from scrapy.crawler import CrawlerProcess
+import matplotlib.pyplot as plt
+
 
 
 def scrape_top250_movies(url = 'http://top250.info/charts/?2023/09/25'):
@@ -125,3 +127,41 @@ def merge_and_clean_data():
     merged_df['Movie Rating mm'] = merged_df['Movie Rating mm'].str.replace(',', '.').astype(float)
     
     merged_df.to_csv('merged.csv', index=False)
+    
+    
+def visualize_rating_distribution(data):
+    bins = [0, 2, 4, 6, 8, 10]
+    labels = ['0-2', '2-4', '4-6', '6-8', '8-10']
+
+
+    data['Rating Bin'] = pd.cut(data['Movie Rating IMDB'], bins=bins, labels=labels)
+
+
+    rating_counts = data['Rating Bin'].value_counts().sort_index()
+
+
+    plt.figure(figsize=(10, 6))
+    plt.bar(rating_counts.index, rating_counts.values)
+    plt.xlabel('Rating Bin')
+    plt.ylabel('Number of Movies')
+    plt.title('Distribution of Movie Ratings')
+    plt.show()
+
+
+
+def visualize_genre_distribution(dataframe, column_name):
+
+    genre_counts = dataframe[column_name].value_counts()
+
+
+    plt.figure(figsize=(10, 6))
+    genre_counts.plot(kind='bar')
+    plt.title('Movie Genre Distribution')
+    plt.xlabel('Genre')
+    plt.ylabel('Count')
+    plt.xticks(rotation=45)
+
+    # Display the chart
+    plt.tight_layout()
+    plt.show()
+
