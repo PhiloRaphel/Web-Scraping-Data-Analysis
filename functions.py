@@ -1,6 +1,10 @@
 import requests
 from scrapy import Selector
 import pandas as pd
+import scrapy
+import csv
+from scrapy.crawler import CrawlerProcess
+
 
 def scrape_top250_movies(url = 'http://top250.info/charts/?2023/09/25'):
     try:
@@ -45,3 +49,79 @@ def scrape_top250_movies(url = 'http://top250.info/charts/?2023/09/25'):
         print(f"Network Error: {e}")
     except Exception as e:
         print(f"Error: {e}")
+        
+        
+
+def scrape_movie_data():
+    movie_title = []    
+    movie_alt_title = []
+    movie_genre = []
+    movie_rating = []
+    movie_rank = []
+    movie_rel_date = []
+    
+    class MovieMeterSpider(scrapy.Spider):
+        name = 'moviemeterspider'
+        
+        def start_requests(self):
+            try:
+                yield scrapy.Request(url='https://www.moviemeter.com/movies/top-250-best-movies-of-all-time', callback=self.parse)
+            except Exception as e:
+                print(f"An exception occurred: {str(e)}")
+
+        def parse(self, response):
+            try:
+                list_items = response.xpath('.//*[@id="filter_system"]/div[2]')
+                num_table = len(list_items.xpath('./table'))
+                num_movs_per_table = []
+
+                for i in range(num_table):
+                    num_movs_per_table.append(len(list_items.xpath(f'./table[{i+1}]/tbody/tr')))
+
+                for i in range(num_table):
+                    for j in range((num_movs_per_table[i])):
+                        movie_title.append(list_items.xpath(f'./table[{i+1}]/tbody/tr[{j+1}]/td[3]/div/h4/a/text()').extract()[0][:-7])
+                        year = list_items.xpath(f'./table[{i+1}]/tbody/tr[{j+1}]/td[3]/div/h4/a/text()').extract()[0][-7:]
+                        movie_rel_date.append(year[2:-1])
+
+                        if len(list_items.xpath(f'./table[{i+1}]/tbody/tr[{j+1}]/td[3]/div/div')) == 2:
+                            movie_alt_title.append('')
+                            movie_genre.append(list_items.xpath(f'./table[{i+1}]/tbody/tr[{j+1}]/td[3]/div/div[1]/text()').extract())
+                        elif len(list_items.xpath(f'./table[{i+1}]/tbody/tr[{j+1}]/td[3]/div/div')) == 3:
+                            movie_alt_title.append(list_items.xpath(f'./table[{i+1}]/tbody/tr[{j+1}]/td[3]/div/div[1]/text()').extract()[0][19:])
+                            movie_genre.append(list_items.xpath(f'./table[{i+1}]/tbody/tr[{j+1}]/td[3]/div/div[2]/text()').extract())
+
+                        movie_rank.append(list_items.xpath(f'./table[{i+1}]/tbody/tr[{j+1}]/td[1]/a/span/text()').extract()[0]) 
+                        movie_rating.append(list_items.xpath(f'./table[{i+1}]/tbody/tr[{j+1}]/td[4]/div/div[1]/text()').extract()[0])
+            except Exception as e:
+                print(f"An exception occurred: {str(e)}")
+    
+    process = CrawlerProcess()
+    process.crawl(MovieMeterSpider)
+    process.start()
+    
+    return movie_rank, movie_title, movie_alt_title, movie_genre, movie_rel_date, movie_rating
+
+def save_movie_data_to_csv(movie_rank, movie_title, movie_alt_title, movie_genre, movie_rel_date, movie_rating):
+    csv_filename = 'moviemeter_top250.csv'
+    data = list(zip(movie_rank, movie_title, movie_alt_title, movie_genre, movie_rel_date, movie_rating))
+    
+    with open(csv_filename, 'w', newline='', encoding="utf-8") as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerow(['Movie Rank', 'Movie Title', 'Movie Alt Title', 'Movie Genre', 'Date of Release', 'Movie Rating'])
+        csv_writer.writerows(data)
+    
+
+def merge_and_clean_data():
+    movie_meter_df = pd.read_csv('moviemeter_top250.csv')
+    top_250_df = pd.read_csv('top250_movies_data.csv')
+    
+    merged_df = pd.merge(movie_meter_df, top_250_df, on='Movie Title', how='inner')
+    
+    merged_df = merged_df[['Movie Rank_x', 'Movie Title', 'Movie Alt Title', 'Movie Genre', 'Date of Release_x', 'Movie Rating_y', 'Movie Rating_x']]
+    
+    merged_df.rename(columns={'Date of Release_x': 'Date of Release', 'Movie Rank_x': 'Movie Rank', 'Movie Rating_x': 'Movie Rating mm', 'Movie Rating_y': 'Movie Rating IMDB'}, inplace=True)
+    merged_df['Movie Rank'] = range(1, len(merged_df) + 1)
+    merged_df['Movie Rating mm'] = merged_df['Movie Rating mm'].str.replace(',', '.').astype(float)
+    
+    merged_df.to_csv('merged.csv', index=False)
