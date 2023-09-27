@@ -7,7 +7,7 @@ from scrapy.crawler import CrawlerProcess
 import matplotlib.pyplot as plt
 
 
-
+# Author: Yousef
 def scrape_top250_movies(url = 'http://top250.info/charts/?2023/09/25'):
     try:
         html = requests.get(url).content
@@ -51,9 +51,8 @@ def scrape_top250_movies(url = 'http://top250.info/charts/?2023/09/25'):
         print(f"Network Error: {e}")
     except Exception as e:
         print(f"Error: {e}")
-        
-        
 
+# Author: Philo
 def scrape_movie_data():
     movie_title = []    
     movie_alt_title = []
@@ -104,6 +103,7 @@ def scrape_movie_data():
     
     return movie_rank, movie_title, movie_alt_title, movie_genre, movie_rel_date, movie_rating
 
+# Author: Philo
 def save_movie_data_to_csv(movie_rank, movie_title, movie_alt_title, movie_genre, movie_rel_date, movie_rating):
     csv_filename = 'moviemeter_top250.csv'
     data = list(zip(movie_rank, movie_title, movie_alt_title, movie_genre, movie_rel_date, movie_rating))
@@ -112,8 +112,8 @@ def save_movie_data_to_csv(movie_rank, movie_title, movie_alt_title, movie_genre
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(['Movie Rank', 'Movie Title', 'Movie Alt Title', 'Movie Genre', 'Date of Release', 'Movie Rating'])
         csv_writer.writerows(data)
-    
-
+  
+# Author: Philo  
 def merge_and_clean_data():
     movie_meter_df = pd.read_csv('moviemeter_top250.csv')
     top_250_df = pd.read_csv('top250_movies_data.csv')
@@ -127,8 +127,8 @@ def merge_and_clean_data():
     merged_df['Movie Rating mm'] = merged_df['Movie Rating mm'].str.replace(',', '.').astype(float)
     
     merged_df.to_csv('merged.csv', index=False)
-    
-    
+  
+# Author: Philo     
 def visualize_rating_distribution(data):
     bins = [0, 2, 4, 6, 8, 10]
     labels = ['0-2', '2-4', '4-6', '6-8', '8-10']
@@ -147,8 +147,7 @@ def visualize_rating_distribution(data):
     plt.title('Distribution of Movie Ratings')
     plt.show()
 
-
-
+# Author: Philo
 def visualize_genre_distribution(dataframe, column_name):
 
     genre_counts = dataframe[column_name].value_counts()
@@ -165,3 +164,9 @@ def visualize_genre_distribution(dataframe, column_name):
     plt.tight_layout()
     plt.show()
 
+# Author: Yousef
+def maxmin_movie(df, rating, fn):
+    if fn == 'max':
+        return df[df['Movie Rating IMDB'] == df['Movie Rating IMDB'].max()]  if rating =='IMDB' else df[df['Movie Rating mm'] == df['Movie Rating mm'].max()] 
+    elif fn == 'min':
+        return df[df['Movie Rating IMDB'] == df['Movie Rating IMDB'].min()]  if rating =='IMDB' else df[df['Movie Rating mm'] == df['Movie Rating mm'].min()] 
