@@ -5,6 +5,9 @@ import scrapy
 import csv
 from scrapy.crawler import CrawlerProcess
 import matplotlib.pyplot as plt
+import logging 
+logging.getLogger('matplotlib').setLevel(logging.ERROR)
+logging.getLogger('scrapy').setLevel(logging.ERROR)
 
 
 # Author: Yousef
@@ -151,17 +154,20 @@ def visualize_rating_distribution(data,rating_col_name, bins, labels, title, x_l
 
 # Author: Philo
 def visualize_genre_distribution(data, col_name, title, x_label, y_label):
-    genre_counts = data[col_name].value_counts()
-    plt.figure(figsize=(10, 6))
-    genre_counts.plot(kind='bar')
-    plt.title(title)
-    plt.xlabel(x_label)
-    plt.ylabel(y_label)
-    plt.xticks(rotation=45)
-    plt.grid()
-    plt.tight_layout()
-    plt.show()
-
+    try:
+        genre_counts = data[col_name].value_counts()
+        plt.figure(figsize=(10, 6))
+        genre_counts.plot(kind='bar')
+        plt.title(title)
+        plt.xlabel(x_label)
+        plt.ylabel(y_label)
+        plt.xticks(rotation=45)
+        plt.grid()
+        plt.tight_layout()
+        plt.show()
+    except Exception as err_msg:
+        print(f"An error occurred: {str(err_msg)}")
+        
 # Author: Yousef
 def maxmin_movie(df, rating, fn):
     if fn == 'max':

@@ -3,15 +3,16 @@ from collections import Counter
 from functions import *
 
 # 1. Scraping Movie Data: 
-# Website 1 - MovieMeter: -> Philo
+# Website 1 - 250Films: -> Yousef
+scrape_top250_movies()
+
+# Website 2 - MovieMeter: -> Philo
 movie_rank, movie_title, movie_alt_title, movie_genre, movie_rel_date, movie_rating = scrape_moviemeter_data()
 data_list = list(zip(movie_rank, movie_title, movie_alt_title, movie_genre, movie_rel_date, movie_rating))
 col_name = ['Movie Rank', 'Movie Title', 'Movie Alt Title', 'Movie Genre', 'Date of Release', 'Movie Rating']
 save_movie_data_to_csv('moviemeter_top250.csv', data_list, col_name)
 merge_and_clean_data('moviemeter_top250.csv', 'top250_movies_data.csv', 'merged_top_movies.csv')
 
-# Website 2 - 250Films: -> Yousef
-scrape_top250_movies()
 
 # 2. Data Analysis:
 df = pd.read_csv('merged_top_movies.csv')
