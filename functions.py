@@ -7,7 +7,6 @@ from scrapy.crawler import CrawlerProcess
 import matplotlib.pyplot as plt
 
 
-
 def scrape_top250_movies(url = 'http://top250.info/charts/?2023/09/25'):
     try:
         html = requests.get(url).content
@@ -54,14 +53,14 @@ def scrape_top250_movies(url = 'http://top250.info/charts/?2023/09/25'):
         
         
 
-def scrape_movie_data():
+def scrape_moviemeter_data():
     movie_title = []    
     movie_alt_title = []
     movie_genre = []
     movie_rating = []
     movie_rank = []
     movie_rel_date = []
-    
+
     class MovieMeterSpider(scrapy.Spider):
         name = 'moviemeterspider'
         
@@ -73,6 +72,7 @@ def scrape_movie_data():
 
         def parse(self, response):
             try:
+                
                 list_items = response.xpath('.//*[@id="filter_system"]/div[2]')
                 num_table = len(list_items.xpath('./table'))
                 num_movs_per_table = []
@@ -97,71 +97,73 @@ def scrape_movie_data():
                         movie_rating.append(list_items.xpath(f'./table[{i+1}]/tbody/tr[{j+1}]/td[4]/div/div[1]/text()').extract()[0])
             except Exception as e:
                 print(f"An exception occurred: {str(e)}")
-    
+            
     process = CrawlerProcess()
     process.crawl(MovieMeterSpider)
     process.start()
-    
     return movie_rank, movie_title, movie_alt_title, movie_genre, movie_rel_date, movie_rating
 
-def save_movie_data_to_csv(movie_rank, movie_title, movie_alt_title, movie_genre, movie_rel_date, movie_rating):
-    csv_filename = 'moviemeter_top250.csv'
-    data = list(zip(movie_rank, movie_title, movie_alt_title, movie_genre, movie_rel_date, movie_rating))
+def save_movie_data_to_csv(csv_file_name,data_list,col_names):
+    csv_filename = csv_file_name
+    data = data_list
+    try:
+        with open(csv_filename, 'w', newline='', encoding="utf-8") as csvfile:
+            csv_writer = csv.writer(csvfile)
+            csv_writer.writerow(col_names)
+            csv_writer.writerows(data)
+    except Exception as err_msg:
+        print(f"An error occurred: {str(err_msg)}")
+
+def merge_and_clean_data(movie_meter_csv, top250_movies_csv, merged_file_csv_name):
     
-    with open(csv_filename, 'w', newline='', encoding="utf-8") as csvfile:
-        csv_writer = csv.writer(csvfile)
-        csv_writer.writerow(['Movie Rank', 'Movie Title', 'Movie Alt Title', 'Movie Genre', 'Date of Release', 'Movie Rating'])
-        csv_writer.writerows(data)
+    try:
+        movie_meter_df = pd.read_csv(movie_meter_csv)
+        top_250_df = pd.read_csv(top250_movies_csv)    
+        merged_df = pd.merge(movie_meter_df, top_250_df, on='Movie Title', how='inner')    
+        merged_df = merged_df[['Movie Rank_x', 'Movie Title', 'Movie Alt Title', 'Movie Genre', 'Date of Release_x', 'Movie Rating_y', 'Movie Rating_x']]
+        merged_df.rename(columns={'Date of Release_x': 'Date of Release', 'Movie Rank_x': 'Movie Rank', 'Movie Rating_x': 'Movie Rating mm', 'Movie Rating_y': 'Movie Rating IMDB'}, inplace=True)
+        merged_df['Movie Rank'] = range(1, len(merged_df) + 1)
+        merged_df['Movie Rating mm'] = merged_df['Movie Rating mm'].str.replace(',', '.').astype(float)
+        
+        merged_df.to_csv(merged_file_csv_name, index=False)
+    except Exception as err_msg:
+        print(f"An error occurred: {str(err_msg)}")
+
     
+def visualize_rating_distribution(data,rating_col_name, bins, labels, title, x_labal, y_label):
 
-def merge_and_clean_data():
-    movie_meter_df = pd.read_csv('moviemeter_top250.csv')
-    top_250_df = pd.read_csv('top250_movies_data.csv')
-    
-    merged_df = pd.merge(movie_meter_df, top_250_df, on='Movie Title', how='inner')
-    
-    merged_df = merged_df[['Movie Rank_x', 'Movie Title', 'Movie Alt Title', 'Movie Genre', 'Date of Release_x', 'Movie Rating_y', 'Movie Rating_x']]
-    
-    merged_df.rename(columns={'Date of Release_x': 'Date of Release', 'Movie Rank_x': 'Movie Rank', 'Movie Rating_x': 'Movie Rating mm', 'Movie Rating_y': 'Movie Rating IMDB'}, inplace=True)
-    merged_df['Movie Rank'] = range(1, len(merged_df) + 1)
-    merged_df['Movie Rating mm'] = merged_df['Movie Rating mm'].str.replace(',', '.').astype(float)
-    
-    merged_df.to_csv('merged.csv', index=False)
+    try:
+        data['Rating Bin'] = pd.cut(data[rating_col_name], bins=bins, labels=labels)
     
     
-def visualize_rating_distribution(data):
-    bins = [0, 2, 4, 6, 8, 10]
-    labels = ['0-2', '2-4', '4-6', '6-8', '8-10']
+        rating_counts = data['Rating Bin'].value_counts().sort_index()
+    
+    
+        plt.figure(figsize=(10, 6))
+        plt.bar(rating_counts.index, rating_counts.values)
+        plt.xlabel(x_labal)
+        plt.ylabel(y_label)
+        plt.title(title)
+        plt.grid()
+        plt.tight_layout()
+        plt.show()
+
+    except Exception as err_msg:
+        print(f"An error occurred: {str(err_msg)}")
 
 
-    data['Rating Bin'] = pd.cut(data['Movie Rating IMDB'], bins=bins, labels=labels)
+def visualize_genre_distribution(data, col_name, title, x_label, y_label):
 
-
-    rating_counts = data['Rating Bin'].value_counts().sort_index()
-
-
-    plt.figure(figsize=(10, 6))
-    plt.bar(rating_counts.index, rating_counts.values)
-    plt.xlabel('Rating Bin')
-    plt.ylabel('Number of Movies')
-    plt.title('Distribution of Movie Ratings')
-    plt.show()
-
-
-
-def visualize_genre_distribution(dataframe, column_name):
-
-    genre_counts = dataframe[column_name].value_counts()
+    genre_counts = data[col_name].value_counts()
 
 
     plt.figure(figsize=(10, 6))
     genre_counts.plot(kind='bar')
-    plt.title('Movie Genre Distribution')
-    plt.xlabel('Genre')
-    plt.ylabel('Count')
+    plt.title(title)
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
     plt.xticks(rotation=45)
-
-    # Display the chart
+    plt.grid()
     plt.tight_layout()
     plt.show()
 

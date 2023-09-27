@@ -1,0 +1,135 @@
+Movie Rank,Movie Title,Movie Alt Title,Movie Genre,Date of Release,Movie Rating IMDB,Movie Rating mm
+1,The Shawshank Redemption,,['Drama'],1994,9.3,4.42
+2,The Godfather,Mario Puzo's The Godfather,['Crime'],1972,9.2,4.37
+3,The Godfather: Part II,Mario Puzo's The Godfather: Part II,['Crime'],1974,9.0,4.29
+4,The Green Mile,Stephen King's The Green Mile,"['Fantasy, Drama']",1999,8.6,4.28
+5,Pulp Fiction,,"['Crime, Drama']",1994,8.9,4.26
+6,The Lord of the Rings: The Return of the King,,"['Adventure, Fantasy']",2003,9.0,4.24
+7,Schindler's List,,"['War, Drama']",1993,9.0,4.24
+8,Se7en,Seven,"['Thriller, Crime']",1995,8.6,4.22
+9,The Lord of the Rings: The Fellowship of the Ring,,"['Fantasy, Adventure']",2001,8.8,4.21
+10,Gladiator,,"['History, Drama']",2000,8.5,4.19
+11,Scarface,,"['Crime, Drama']",1983,8.3,4.19
+12,Goodfellas,GoodFellas,"['Crime, Drama']",1990,8.7,4.19
+13,American History X,,"['Crime, Drama']",1998,8.5,4.18
+14,The Pianist,,"['Drama, War']",2002,8.5,4.18
+15,Intouchables,The Intouchables,"['Comedy, Drama']",2011,8.5,4.18
+16,The Lord of the Rings: The Two Towers,,"['Adventure, Fantasy']",2002,8.8,4.16
+17,Forrest Gump,,"['Comedy, Drama']",1994,8.8,4.16
+18,Cidade de Deus,City of God,"['Drama, Crime']",2002,8.6,4.15
+19,The Dark Knight,,"['Action, Crime']",2008,9.0,4.13
+20,The Silence of the Lambs,,"['Thriller, Crime']",1991,8.6,4.13
+21,The Usual Suspects,,"['Crime, Mystery']",1995,8.5,4.12
+22,Saving Private Ryan,,"['War, Drama']",1998,8.6,4.11
+23,Heat,,"['Crime, Thriller']",1995,8.3,4.11
+24,12 Angry Men,Twelve Angry Men,['Drama'],1957,9.0,4.1
+25,Fight Club,,"['Comedy, Thriller']",1999,8.8,4.09
+26,American Beauty,,"['Drama, Comedy']",1999,8.3,4.09
+27,Into the Wild,,"['Biography, Drama']",2007,8.1,4.06
+28,Reservoir Dogs,,"['Crime, Drama']",1992,8.3,4.04
+29,Léon,The Professional,"['Crime, Drama']",1994,8.5,4.04
+30,Requiem for a Dream,,['Drama'],2000,8.3,4.03
+31,Jagten,The Hunt,['Drama'],2012,8.3,4.03
+32,Apocalypse Now,Apocalypse Now Redux,"['War, Drama']",1979,8.4,4.02
+33,Django Unchained,,"['Western, Action']",2012,8.5,4.02
+34,Das Leben der Anderen,The Lives of Others,"['Drama, Thriller']",2006,8.4,4.02
+35,The Matrix,,"['Scifi, Action']",1999,8.7,4.01
+36,Inception,,"['Thriller, Scifi']",2010,8.8,4.0
+37,Braveheart,,"['War, History']",1995,8.3,4.0
+38,The Lion King,De Leeuwenkoning,"['Animation, Family']",1994,8.5,3.98
+39,"Lock, Stock and Two Smoking Barrels","Lock, Stock & Two Smoking Barrels","['Crime, Comedy']",1998,8.1,3.98
+40,Seppuku,Harakiri,['Drama'],1962,8.6,3.98
+41,The Shining,,"['Horror, Mystery']",1980,8.4,3.97
+42,Das Boot,De Andere Kant van de Oorlog,"['War, Drama']",1981,8.4,3.97
+43,Inglourious Basterds,,"['War, Comedy']",2009,8.3,3.96
+44,The Departed,,"['Crime, Thriller']",2006,8.5,3.96
+45,Der Untergang,Downfall,"['History, War']",2004,8.2,3.95
+46,Full Metal Jacket,,"['War, Drama']",1987,8.3,3.95
+47,Prisoners,,"['Crime, Thriller']",2013,8.1,3.94
+48,Joker,,"['Crime, Drama']",2019,8.4,3.94
+49,North by Northwest,De Man Die Verdwijnen Moest,"['Thriller, Mystery']",1959,8.3,3.94
+50,Terminator 2: Judgment Day,T2 - Terminator 2: Judgment Day,"['Action, Scifi']",1991,8.6,3.93
+51,Rear Window,De Stille Getuige,"['Thriller, Mystery']",1954,8.5,3.93
+52,Nuovo Cinema Paradiso,Cinema Paradiso,['Drama'],1988,8.5,3.93
+53,Trainspotting,,"['Drama, Comedy']",1996,8.1,3.92
+54,A Clockwork Orange,,['Crime'],1971,8.3,3.92
+55,Alien,,"['Horror, Scifi']",1979,8.5,3.92
+56,1917,,"['Drama, War']",2019,8.2,3.92
+57,In the Name of the Father,,"['Drama, Biography']",1993,8.1,3.92
+58,Green Book,,"['Biography, Comedy']",2018,8.2,3.92
+59,It's a Wonderful Life,"Mens, Durf te Leven","['Drama, Romance']",1946,8.6,3.92
+60,Double Indemnity,Bloedgeld,"['Filmnoir, Crime']",1944,8.3,3.92
+61,The Father,,['Drama'],2020,8.2,3.92
+62,Casino,,"['Crime, Drama']",1995,8.2,3.91
+63,Platoon,,"['War, Drama']",1986,8.1,3.91
+64,The Deer Hunter,,"['War, Drama']",1978,8.1,3.91
+65,Psycho,Alfred Hitchcock's Psycho,"['Horror, Thriller']",1960,8.5,3.91
+66,Casablanca,,"['Romance, Drama']",1942,8.5,3.91
+67,Memento,,"['Mystery, Thriller']",2000,8.4,3.9
+68,The Prestige,,"['Mystery, Drama']",2006,8.5,3.9
+69,Gran Torino,,"['Drama, Crime']",2008,8.1,3.9
+70,Taxi Driver,,"['Drama, Crime']",1976,8.2,3.9
+71,Interstellar,,"['Scifi, Mystery']",2014,8.7,3.9
+72,Vertigo,De Vrouw Die Tweemaal Leefde,"['Thriller, Mystery']",1958,8.3,3.9
+73,Gisaengchung,Parasite,"['Drama, Comedy']",2019,8.5,3.9
+74,Sunset Blvd.,Sunset Boulevard,"['Drama, Filmnoir']",1950,8.4,3.9
+75,Pirates of the Caribbean: The Curse of the Black Pearl,,"['Action, Adventure']",2003,8.1,3.89
+76,Hotel Rwanda,,"['Drama, War']",2004,8.1,3.89
+77,Mary and Max,,"['Animation, Drama']",2009,8.1,3.89
+78,L.A. Confidential,,"['Crime, Thriller']",1997,8.2,3.88
+79,Warrior,,"['Drama, Sport']",2011,8.1,3.88
+80,Judgment at Nuremberg,Judgement at Nuremberg,"['Drama, War']",1961,8.3,3.88
+81,Shutter Island,,"['Mystery, Thriller']",2010,8.2,3.87
+82,The Sixth Sense,,"['Thriller, Mystery']",1999,8.2,3.87
+83,Eternal Sunshine of the Spotless Mind,,"['Romance, Scifi']",2004,8.3,3.87
+84,The Wolf of Wall Street,,"['Biography, Comedy']",2013,8.2,3.87
+85,Harry Potter and the Deathly Hallows: Part 2,Harry Potter en de Relieken van de Dood: Deel 2,"['Fantasy, Adventure']",2011,8.1,3.87
+86,"Three Billboards Outside Ebbing, Missouri",,"['Crime, Drama']",2017,8.1,3.87
+87,Witness for the Prosecution,,"['Crime, Drama']",1957,8.4,3.87
+88,Capharnaüm,Capernaum,['Drama'],2018,8.4,3.87
+89,Ikiru,Doomed,['Drama'],1952,8.3,3.87
+90,La Haine,Hate,"['Drama, Crime']",1995,8.1,3.86
+91,Whiplash,,"['Drama, Music']",2014,8.5,3.86
+92,Oppenheimer,,"['Biography, Drama']",2023,8.6,3.86
+93,The Big Lebowski,,['Comedy'],1998,8.1,3.85
+94,A Beautiful Mind,,"['Biography, Drama']",2001,8.2,3.85
+95,Aliens,,"['Scifi, Action']",1986,8.4,3.85
+96,Paths of Glory,,"['War, Drama']",1957,8.4,3.85
+97,Toy Story 3,,"['Animation, Comedy']",2010,8.3,3.84
+98,The Third Man,The 3rd Man,"['Filmnoir, Thriller']",1949,8.1,3.84
+99,Fargo,,"['Crime, Comedy']",1996,8.1,3.83
+100,Good Will Hunting,,['Drama'],1997,8.3,3.83
+101,The Thing,John Carpenter's The Thing,"['Horror, Scifi']",1982,8.2,3.83
+102,Raging Bull,,"['Biography, Sport']",1980,8.1,3.83
+103,Lawrence of Arabia,Lawrence van Arabië,"['Adventure, Biography']",1962,8.3,3.83
+104,La Battaglia di Algeri,The Battle of Algiers,"['Drama, War']",1966,8.1,3.83
+105,Die Hard,,"['Action, Thriller']",1988,8.2,3.82
+106,Raiders of the Lost Ark,Indiana Jones and the Raiders of the Lost Ark,"['Action, Adventure']",1981,8.4,3.82
+107,Star Wars,Star Wars: Episode IV - A New Hope,"['Fantasy, Scifi']",1977,8.6,3.82
+108,Star Wars: Episode VI - Return of the Jedi,,"['Fantasy, Scifi']",1983,8.3,3.82
+109,The Best Years of Our Lives,De Beste Jaren van Ons Leven,"['Drama, War']",1946,8.1,3.82
+110,Back to the Future,Terug naar de Toekomst,"['Scifi, Comedy']",1985,8.5,3.81
+111,2001: A Space Odyssey,2001: Een Zwerftocht in de Ruimte,"['Scifi, Adventure']",1968,8.3,3.81
+112,Oldeuboi,Oldboy,"['Drama, Crime']",2003,8.4,3.81
+113,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb,Dr. Strangelove,"['Comedy, War']",1964,8.4,3.81
+114,Chinatown,,['Mystery'],1974,8.2,3.81
+115,The Grapes of Wrath,,['Drama'],1940,8.1,3.81
+116,No Country for Old Men,,"['Crime, Thriller']",2007,8.2,3.8
+117,Million Dollar Baby,,"['Drama, Sport']",2004,8.1,3.8
+118,Ben-Hur,Ben Hur,"['Adventure, History']",1959,8.1,3.8
+119,Persona,,['Drama'],1966,8.1,3.8
+120,The Truman Show,,"['Drama, Comedy']",1998,8.2,3.79
+121,Jurassic Park,Jurassic Park 3D,"['Adventure, Scifi']",1993,8.2,3.79
+122,Indiana Jones and the Last Crusade,,"['Action, Adventure']",1989,8.2,3.79
+123,The Elephant Man,,"['Drama, Biography']",1980,8.2,3.79
+124,Incendies,,"['Drama, Mystery']",2010,8.3,3.79
+125,Coco,,"['Animation, Adventure']",2017,8.4,3.79
+126,The Sting,,"['Crime, Comedy']",1973,8.3,3.79
+127,Tonari no Totoro,My Neighbor Totoro,"['Animation, Fantasy']",1988,8.1,3.79
+128,The Apartment,,"['Romance, Comedy']",1960,8.3,3.79
+129,To Be or Not to Be,,"['Comedy, War']",1942,8.2,3.79
+130,Batman Begins,,"['Action, Crime']",2005,8.2,3.78
+131,Room,,['Drama'],2015,8.1,3.78
+132,The Help,,['Drama'],2011,8.1,3.78
+133,The Great Dictator,De Dictator,"['Comedy, War']",1940,8.4,3.78
+134,Dial M for Murder,U Spreekt met Uw Moordenaar,"['Thriller, Crime']",1954,8.2,3.78
